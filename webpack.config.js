@@ -1,5 +1,8 @@
 const path = require('path')
 const { CheckerPlugin } = require('awesome-typescript-loader')
+const ESLintPlugin = require('eslint-webpack-plugin')
+
+const SRC_DIR = path.resolve(__dirname, 'src')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
@@ -44,7 +47,13 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new CheckerPlugin()
+    new CheckerPlugin(),
+    new ESLintPlugin({
+      extensions: ['ts', 'tsx'],
+      fix: false,
+      files: SRC_DIR,
+      failOnError: false
+    })
   ],
   output: {
     path: path.resolve(__dirname, './public'),
