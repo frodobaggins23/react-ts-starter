@@ -6,6 +6,7 @@ const SRC_DIR = path.resolve(__dirname, 'src')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.tsx'),
+  mode: 'production',
   module: {
     rules: [
       {
@@ -58,19 +59,5 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './public/bundle'),
     filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: path.resolve(__dirname, './public'),
-    publicPath: '/bundle', // specifying where the bundled files are located
-    hot: true,
-    port: 6969,
-    proxy: {
-      // use proxy for API calls between React and Express server
-      '/api': {
-        target: 'http://localhost:4500 ',
-        secure: false,
-        changeOrigin: true
-      }
-    }
   }
 }

@@ -14,7 +14,9 @@ const Home = () => {
               <li>CSS modules</li>
               <li>Webpack dev server</li>
               <li>Eslint</li>
+              <li>Express server</li>
             </ul>
+            <p>Call <code>/api/get-data</code> to test the Express server</p>
             <img src={logo}/>
         </div>
     </div>
