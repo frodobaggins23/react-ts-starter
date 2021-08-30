@@ -3,10 +3,7 @@ import styles from './header.module.scss'
 
 const Header = () => {
   return (
-        <div>
-            Header
-            <div className={styles.testModule}>CSS <span>modules</span></div>
-        </div>
+            <div className={styles.testModule}>React TS <span>starter kit</span></div>
   )
 }
 

@@ -8,7 +8,13 @@ const Home = () => {
     <div className="container">
         <div className="header">
             <Header/>
-            <h1>Welcome to React application</h1>
+            <h4>What is included?</h4>
+            <ul>
+              <li>Typescript</li>
+              <li>CSS modules</li>
+              <li>Webpack dev server</li>
+              <li>Eslint</li>
+            </ul>
             <img src={logo}/>
         </div>
     </div>
